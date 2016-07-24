@@ -1,0 +1,21 @@
+version: '2'
+services:
+  mongo:
+    image: singli/mongorepl:fusion
+
+  rocketchat:
+    image: singli/rc:$BRANCH
+    environment:
+      - PORT=$INPORT
+      - ROOT_URL=http://docker:$INPORT
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - MONGO_URL=mongodb://mongo:27017/rc$BRANCH
+    ports:
+      - '${INPORT}'
+    depends_on:
+      - mongo
+
+networks:
+  default:
+    external:
+      name: ingress

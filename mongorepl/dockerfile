@@ -1,0 +1,9 @@
+FROM mongo:3.0
+
+VOLUME /data
+
+EXPOSE 27017
+
+COPY mkrep.sh .
+
+CMD ./mkrep.sh

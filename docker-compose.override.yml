@@ -1,0 +1,5 @@
+version: '2'
+services:
+  rocketchat:
+    environment:
+      - ROOT_URL=http://corei3:$INPORT
