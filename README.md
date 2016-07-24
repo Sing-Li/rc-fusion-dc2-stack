@@ -1,6 +1,6 @@
 ## docker-compose v2 format 
 
-Use with docker-compose v1.8 or later only to create stack for swarm mode docker 1.12 or later.
+Use with docker-compose v1.8 or later only to create stack for orchestrations using docker 1.12 or later.
 
 #### customize the deployment
 
